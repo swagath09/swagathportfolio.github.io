@@ -1,542 +1,290 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Portfolio</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <style>
-            .nav{
-                background-color: white;
-                color: black;
-                width: 100%;
-                height: 80px;
-                display: flex;
-                flex-wrap: wrap;
-            }
-            .nav h2{
-                margin-left: 100px;
-                font-size: xx-large;
-                margin: 20px 0px 20px 100px;
-                color: #023e8a;
-                flex-wrap: wrap;
-            }
-            .sub-nav{
-                display: flex;
-                margin-top: 30px;
-                color: black;
-                margin-left: 600px;
-                font-size: medium;
-                flex-wrap: wrap;
-            }
-            .sub-nav a{
-                margin-right: 50px;
-                flex-wrap: wrap;
-                text-decoration: none;
-                color: black;
-            }
-            .sub-nav a:hover{
-                color: #0077b6;
-            }
-            .container{
-                background-color: #cce1f5;
-                width: 100%;
-                height: 500px;
-                flex-wrap: wrap;
-                display: flex;
-            }
-            .details{
-                padding: 40px;
-                
-            }
-            .details h3{
-                font-size: 30px;
-                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            }
-            .image{
-                border: 1px solid ;
-                width: 350px;
-                height: 350px;
-                border-radius: 50%;
-                background-image: url("https://wallpaperaccess.com/full/4635743.jpg");
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                display: flex;
-                align-items: center;
-                margin: 50px 0px 0px 160px;
-            }
-            .container button{
-                border: 1px solid;
-                color:white;
-                background-color: #023e8a;
-                padding: 20px 30px 20px 30px;
-                margin: 20px 40px 20px 0px;
-                border-radius: 10px;
-                font-size: large;
-                
-            }
-            #project{
-                transition: transform 0.3s ease;
-            }
-            #project:hover{
-                transform: scale(1.1);
-            }
-            #hire{
-                background-color: white;
-                color: #023e8a;
-                transition: transform 0.3s ease;
-            }
-            #hire:hover{
-                transform: scale(1.1);
-            }
-            i{
-                margin: 10px 10px 10px 30px;
-                font-size: 25px;
-                transition: transform 0.3s ease;
-            }
-            i:hover{
-                transform: scale(1.3);
-                color: #0077b6;
-            }
-            .about{
-                display: inline;
-                width: 100%;
-                height: 500px;
-            }
-            .about h2{
-                text-align: center;
-                font-size: 45px;
-            }
-            .about p{
-                margin: 0px 50px 0px 50px;
-            }
-            .img img{
-                display: flex;
-                border: 1px solid black;
-                border-radius: 50%;
-                width: 400px;
-                height: 400px;
-                flex-wrap: wrap;
-                margin: 50px 80px 10px 20px;
-            }
-            img {
-            width: 150px;
-            box-shadow: 5px 5px 10px black;
-            animation: floatUpDown 3s ease-in-out infinite alternate;
-            }
-            @keyframes floatUpDown {
-            0%   { transform: translateY(0); }
-            100% { transform: translateY(-20px); }
-            }
-            .body{
-                display: flex;
-            }
-            .about button{
-                margin: 50px 30px 20px 80px;
-                border: none;
-                border-radius: 10px;
-                transition: transform 0.3s ease;
-            }
-            #one{
-                background-color: #c5ecfa;
-                padding: 40px 80px 40px 80px;
-                font-size: large;
-            }
-            #two{
-                background-color: #b1ee7f;
-                padding: 40px 60px 40px 60px;
-                font-size: large;
-            }
-            #one:hover{
-                transform: scale(1.1);
-            }
-            #two:hover{
-                transform: scale(1.1);
-            }
-            .skill{
-                width: 100%;
-                height: 500px;
-                background-color: white;
-                display: inline;
-            }
-            .lang{
-                display: inline;
-                flex-wrap: wrap;
-                align-items: center;
-                justify-content: space-around;
-            }
-            .lang button{
-                border: none;
-                border-radius: 10px;
-                margin: 30px 150px 30px 250px;
-                transition: transform 0.3s ease;
-            }
-            .lang button i{
-                font-size: 30px;
-            }
-            .lang button:hover{
-                box-shadow: -5px 5px 10px black;
-                transform: scale(1.1);
-            }
-            .project{
-                width: 100%;
-                height: 1000px;
-            }
-            .safe{
-                width: 1300px;
-                height: 800px;
-                border: none;
-                border-radius: 20px;
-                margin: 0px 0px 0px 100px;
-                display: flex;
-                background: linear-gradient(to right, #ADD8E6, #008080);
-            }
-            .sub-safe{
-                margin: 30px;
-                border: none;
-                width: 700px;
-               
-            }
-            .sub-safe li{
-                font-size: large;
-                margin-bottom: 20px;
-            }
-            .sub-safe button{
-                margin: 20px 0px 20px 20px;
-                padding: 10px 30px 10px 30px;
-                border-radius: 10px;
-                border: none;
-                background-color: lightgrey;
-                transition: transform 0.3s ease;
-            }
-            .sub-safe button:hover{
-                transform: scale(1.1);
-                box-shadow: 4px 4px 10px black;
-            }
-            #view1{
-                padding: 10px 30px 10px 30px;
-                background-color: #003566;
-                color: white;
-            }
-            
-            #view2{
-                padding: 10px 30px 10px 30px;
-                background-color: white;
-                color: #003566;
-                border:1px solid #003566;
-            }
-            .safe-img{
-                border: none;
-                width: 700px;
-                height: 400px;
-                display: flex;
-                align-items: center;
-                margin: 200px 50px 0px 20px;
-                background-image: url("https://static.vecteezy.com/system/resources/previews/003/216/623/non_2x/online-car-sharing-for-city-transportation-with-people-and-smartphone-free-vector.jpg");
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                box-shadow: 5px 5px 10px black;
-                border-radius: 20px;
-                transition: transform 0.3s ease;
-            }
-            .safe-img:hover{
-                transform: scale(1.1);
-            }
-            .college{
-                margin: 30px 0px 50px 0px;
-            }
-            .study{
-                border: none;
-                border-radius: 20px;
-                width: 750px;
-                height: 250px;
-                margin: 30px 0px 0px 400px;
-                transition: transform 0.3s ease;
-                box-shadow: 2px -2px 10px black;
-            }
-            .study:hover{
-                transform: scale(1.1);
-                box-shadow: 4px 4px 10px black;
-            }
-            .study h3{
-                font-size: 30px;
-                text-align: center;
-            }
-            .study i{
-                font-size: 50px;
-            }
-            .study p{
-                margin-left: 80px;
-                font-size: 20px;
-            }
-            .study a{
-                margin-left: 80px;
-                font-size: 20px;
-            }
-            .form{
-                display: flex;
-                margin: 20px 0px 50px 100px;
-               
-            }
-            .data{
-                border: none;
-                width: 300px;
-                height: 400px;
-                margin: 0px 200px 0px 60px;
-                padding: 20px;
-                font-size: larger;
-                border-radius: 10px;
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swagath | Portfolio</title>
 
-            }
-            .data p{
-                margin-left: 30px;
-                
-            }
-            .data i{
-                font-size: 20px;
-                color: white;
-                background-color: #003566;
-                padding: 15px ;
-                border-radius: 10px;
-            }
-            .data1{
-                border: none;
-                width: 500px;
-                height: 550px;
-                padding: 30px;
-                margin-left: 100px;
-            }
-            .data1 input{
-                padding: 20px 230px 20px 10px;
-                margin: 20px 0px 20px 0px;
-                border-radius: 10px;
-                border: 1px solid lightgrey;
-            }
-            .data1 #submit{
-                margin-top: 20px;
-                padding: 20px 150px 20px 150px;
-                border-radius: 10px;
-                background-color: #0077b6;
-                border: none;
-                color: white;
-                transition: transform 0.3s ease-out;
-                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                font-size: medium;
-            }
-            #submit:hover{
-                transform: scale(1.1);
-            }
-            label{
-                font-size: large;
-            }
-            .foot{
-                background-color: #003049;
-                width: 100%;
-                height: 300px;
-                color: white;
-                padding: 30px 0px 30px 0px;
-            }
-            .foot h2{
-                text-align: center;
-                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            }
-            .foot h3{
-                text-align: center;
-                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            }
-            .foot p{
-                text-align: center;
-            }
-            .foot a{
-                margin-left: 620px;
-                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-             <nav>
-                <div class="nav">
-                    <h2 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Portfolio</h2>
-                    <div class="sub-nav">
-                        <a href="#home">Home</a>
-                        <a href="#about">About Me</a>
-                        <a href="#skill">Skills</a>
-                        <a href="#projects">Projects</a>
-                        <a href="#college">college</a>
-                        <a href="#contact">Contact Me</a>
-                    </div>
-                </div>
-             </nav>
-        </header>
-        <main>
-            <div class="container">
-                <div class="details">
-                    <h2 style="color: black; font-size: 40px; font-family: Georgia; ">Hi, I'm <span style="color: #003566; font-size: 30px; font-family: Palatino">SWAGATH</span></h2>
-                    <h3>Passionate Frontend Developer</h3>
-                    <p>"Recent Computer Science graduate passionate about creating innovative web solutions.<br> Skilled in frontend and backend technologies with hands-on experience in building real-world applications,<br>
-                        I enjoy turning ideas into interactive and visually appealing web products."</p> 
-                    <button id="project">View Projects</button>
-                    <button id="hire">Hire Me</button><br>
-                    <i class="fa-brands fa-github"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-linkedin"></i>
-                </div>
-                <div class="image"></div><br><br>
-                
-            </div>
-            <section id="about">
-                <div class="body">
-                    <div class="about">
-                        <h2 style="color: black;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; ">About Me</h2>
-                        <h3 style="text-align: center; color: #003566;font-size: 50px; margin-top: -70px;"><bold>______</bold></h3>
-                        
-                        <p>
-                            I'm a recent Computer Science graduate driven by a strong passion for building meaningful digital experiences. I specialize in frontend development and love turning creative ideas into responsive, user-friendly web interfaces.
-                        I recently built SafeRide, a women-centric ride-sharing platform focused on safety and trust, where I handled everything from design to real-time database integration. I'm continuously exploring new technologies like React to stay sharp and improve the quality of my work.
-                        Whether it’s a personal project or a collaborative one, I aim to craft solutions that are both functional and impactful.
-                        </p><br>
-                        <p>
-                            Through academic projects and personal initiatives, I've gained hands-on experience with modern web technologies, database design, and software development best practices.
-                            I'm eager to contribute to innovative teams and continue learning in a professional environment.
-                        </p>
-                        <button id="one">10+<br>project Build</button>
-                        <button id="two">2+<br> Internship experience</button>
-                    </div>
-                    <div class="img">
-                        <img src="Swagath.jpg" alt="image">
-                    </div>
-                </div>
-            </section>
-            <section id="skill">
-                <div class="skill">
-                    <h2 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 50px;color: black; text-align: center; margin-top: 90px;">Technical Skills</h2>
-                    <h3 style="text-align: center; color: #003566;font-size: 50px; margin-top: -70px;"><bold>______</bold></h3>
-                    <div class="lang">
-                        
-                        <button style="padding: 20px 80px 20px 80px;"><i class="fa-solid fa-code"></i>HTML/CSS</button>
-                       
-                        <button style="padding: 20px 80px 20px 80px;"> <i class="fa-brands fa-js"></i>JavaScript</button>
-                       
-                        <button style="padding: 20px 110px 20px 100px;"> <i class="fa-brands fa-java"></i>Java</button>
-                       
-                        <button style="padding: 20px 60px 20px 60px;"> <i class="fa-solid fa-medal"></i>Problem Solving</button>
-                       
-                        <button style="padding: 20px 90px 20px 85px;"> <i class="fa-solid fa-database"></i>DataBase</button>
-                        
-                        <button style="margin-left: 250px; padding: 20px 45px 20px 45px;"><i class="fa-solid fa-laptop-code"></i>backend Development</button>
-                    </div>
-                </div>
-            </section>
-             <section id="projects">
-                <div class="project">
-                    <h2 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 50px;color: black; text-align: center; margin-top: 90px;">Projects</h2>
-                    <h3 style="text-align: center; color: #003566;font-size: 50px; margin-top: -70px;"><bold>______</bold></h3>
-                    <p style="text-align: center; margin: 0px 50px 70px 50px; font-size: 20px; ">Here are some projects that showcase my technical skills and problem-solving abilities.</p>
-                    <div class="safe">
-                        <div class="sub-safe">
-                            <h2 style="font-size: 40px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">SafeRide</h2>
-                            <p style="font-size: large;">A comprehensive ride-sharing safety platform that prioritizes user security with real-time tracking, emergency features, and robust verification systems.</p>
-                            <h3 style="font-size: 30px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Key Features</h3>
-                            <ul>
-                                <li>For Only Women Riders</li>
-                                <li>Real-time GPS tracking</li>
-                                <li>Emergency SOS button</li>
-                                <li>Driver verification system</li>
-                                <li>Secure Booking & Chat System</li>
-                            </ul>
-                            <button>HTML</button>
-                            <button>CSS</button>
-                            <button>JavaScript</button>
-                            <button>Node js</button>
-                            <button>Firebase</button>
-                            <button>APIs</button><br>>
-                            <button id="view1"><i class="fa-solid fa-file-export"></i>View Project</button>
-                            <button id="view2"><i class="fa-brands fa-github"></i>Source Code</button>
-                        </div>
-                        <div class="safe-img"></div>
-                    </div>
-                </div>
-            </section>
-            <section id="college">
-                <div class="college">
-                    <h2 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 50px;color: black; text-align: center; margin-top: 90px;">College</h2>
-                    <h3 style="text-align: center; color: #003566;font-size: 50px; margin-top: -70px;"><bold>______</bold></h3>
-                    <div class="study">
-                        <h3><i style="color: #0077b6;" class="fa-solid fa-graduation-cap"></i >Bachelor of Technology in Computer Science</h3>
-                        <p>MLR Institution of Technology</p>
-                        <a style="color: #0077b6; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; ">2023 - 2027(still pursing)</a>
-                        <a>CGPA : 8.77/10</a>
-                    </div>
-                </div>
-            </section>
-            <section id="contact">
-                <form id="form" onsubmit="return validation()">
-                    <h2 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 50px;color: black; text-align: center; margin-top: 90px;">Let's Connect</h2>
-                    <h3 style="text-align: center; color: #003566;font-size: 50px; margin-top: -70px;"><bold>______</bold></h3>
-                    <p style="text-align: center; margin: 0px 300px 70px 300px; font-size: 20px; ">I'm actively seeking opportunities to start my career in software development. Let's discuss how I can contribute to your team!</p>
-                    <div class="form">
-                        <div class="data">
-                            <a><i class="fa-regular fa-envelope"></i>Email Id <br> <p>swa@gmail.com</p></a><br>
-                            <a><i class="fas fa-phone"></i>Phone Number <br> <p>9874563210</p></a><br>
-                            <a><i class="fas fa-map-marker-alt"></i>Location <br> <p>Hyderabad, India</p></a><br>
-                        </div>
-                        <div class="data1">
-                            <label>Full Name<br><input type="text" placeholder="Your Name" id="name"></label><br>
-                            <label>Email Id<br><input type="email" placeholder="swa@gmail.com" id="email"></label><br>
-                            <label>Company<br><input type="text" placeholder="Your Company" id="company"></label><br>
-                            <label>Message</label><br>
-                            <textarea id="text" placeholder="Tell me about the opportunity..." style="padding: 10px;margin-top: 10px; border-radius: 10px; " cols="50" rows="7"></textarea>
-                            <button id="submit">Send Message</button>
-                        </div>
-                    </div>
-                </form>
-            </section>
-        </main>
-        <footer>
-            <div class="foot">
-                <h2>Swagath</h2>
-                <h3>Passionated Full-Stack Developer</h3>
-                <center>
-                    <i class="fa-brands fa-github"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-linkedin"></i>
-                </center>
-                <p>_____________________________________________</p>
-                <a>
-                    © 2023 Swagath. All rights reserved.
-                </a>
-                
-            </div>
-        </footer>
-        <script>
-            function validation() {
-            let name = document.getElementById("name").value.trim();
-            let email = document.getElementById("email").value.trim();
-            let company = document.getElementById("company").value.trim();
-            let text = document.getElementById("text").value.trim();
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="portfolio.css">
+</head>
 
-            if (name === "") {
-                alert("please enter the name...");
-                return false;
-            } else if (email === "") {
-                alert("please enter the email...");
-                return false;
-            } else if (!email.match(/^[^ ]+@[^ ]+\.[a-z]{2,3}$/)) {
-                alert("please enter a valid email...");
-                return false;
-            } else if (company === "") {
-                alert("please enter the company name...");
-                return false;
-            } else if (text === "") {
-                alert("please enter the message...");
-                return false;
-            }
+<body>
 
-            alert("Thank you for visiting my website...");
-            return true;
-        }
+<nav>
+  <div class="nav-container">
+    <h2>Portfolio</h2>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#Education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
 
-        </script>
-    </body>
+<section class="hero">
+  <div class="hero-container">
+    <div class="hero-text">
+      <h1>Hi, I'm</h1>
+      <h1 class="name">Swagath</h1>
+      <h3 class="hero-roles">
+        <span id="role-text"></span>
+      </h3>
+
+      <p>Computer Science graduate aspiring to become a Full-Stack Developer.
+Skilled in building responsive web applications using frontend and backend technologies.
+Passionate about developing real-world solutions with clean design and efficient logic.</p>
+      <div class="hero-buttons">
+        <button class="primary-btn">View Projects</button>
+        <button class="secondary-btn">Hire Me</button>
+      </div>
+      <div class="hero-icons">
+        <i class="fab fa-github" id="github" title="GitHub"></i>
+        <i class="fab fa-linkedin" id="linkedin" title="LinkedIn"></i>
+        <i class="fab fa-instagram" id="instagram" title="Instagram"></i>
+      </div>
+
+    </div>
+    <div class="hero-img"></div>
+  </div>
+</section>
+
+<section id="about">
+  <h2 class="section-title">About Me</h2>
+  <div class="about-container">
+    <p>
+    I am a Computer Science student with a strong interest in web development and a clear goal of becoming a Full-Stack Developer.
+  </p>
+  <p>
+    I enjoy building end-to-end web applications by working on both frontend interfaces and backend logic, focusing on clean UI, functionality, and real-world problem solving.
+  </p>
+  <p>
+    I have built practical projects such as <strong>SafeRide</strong>, <strong>RentMentor</strong>, and <strong>SkillSync</strong>, gaining hands-on experience with full-stack development, databases, and AI-powered features.
+  </p>
+  </div>
+</section>
+
+<section id="skills">
+  <h2 class="section-title">Technical Stack</h2>
+  <p class="line">Technologies and tools I use to build full-stack web applications</p>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <i class="fa-solid fa-code"></i>
+      <h3>Frontend</h3>
+      <p class="skill-main">HTML, CSS, JavaScript</p>
+      <p>Building responsive and interactive user interfaces</p>
+    </div>
+
+    <div class="skill-card">
+      <i class="fa-solid fa-server"></i>
+      <h3>Backend</h3>
+      <p class="skill-main">Node.js, Express</p>
+      <p>Server-side logic and RESTful API development</p>
+    </div>
+
+    <div class="skill-card">
+      <i class="fa-solid fa-database"></i>
+      <h3>Database</h3>
+      <p class="skill-main">Firebase, MongoDB (Basics)</p>
+      <p>Authentication, real-time data, and basic CRUD operations</p>
+    </div>
+
+    <div class="skill-card">
+      <i class="fa-solid fa-screwdriver-wrench"></i>
+      <h3>Tools</h3>
+      <p class="skill-main">Git, GitHub, Postman</p>
+      <p>Version control, collaboration, and API testing</p>
+    </div>
+
+    <div class="skill-card">
+      <i class="fa-solid fa-laptop-code"></i>
+      <h3>Programming</h3>
+      <p class="skill-main">Java, Problem Solving</p>
+      <p>Core programming concepts and logical problem solving</p>
+    </div>
+
+    <div class="skill-card">
+      <i class="fa-solid fa-layer-group"></i>
+      <h3>Frameworks</h3>
+      <p class="skill-main">React.js, Tailwind CSS</p>
+      <p>Component-based UI and modern styling</p>
+    </div>
+
+    <div class="skill-card">
+      <i class="fa-solid fa-shield-halved"></i>
+      <h3>Authentication</h3>
+      <p class="skill-main">Firebase Authentication</p>
+      <p>Secure login, signup, and user access control</p>
+    </div>
+
+    <div class="skill-card">
+      <i class="fa-solid fa-plug"></i>
+      <h3>APIs</h3>
+      <p class="skill-main">REST APIs</p>
+      <p>API integration, request handling, and data exchange</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="section-title">Projects</h2>
+  <div class="project-card">
+    <div class="project-info">
+      <h1>SafeRide</h1>
+      <p>Women-focused ride safety platform with real-time tracking & SOS.</p>
+      <p><strong>Role: Full-Stack Developer</strong></p>
+      <ul>
+        <li>Real-time GPS tracking</li>
+        <li>Emergency SOS feature</li>
+        <li>Firebase Authentication</li>
+        <li>Secure booking system</li>
+      </ul>
+      <p>Designed to improve safety and trust for women commuters in real-world scenarios.</p>
+      <div class="tech-tags">
+        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Firebase</span>
+      </div>
+      <div class="pro-btn">
+        <button><i class="fa-solid fa-eye"></i>View Demo</button>
+        <button><i class="fa-brands fa-github"></i>GitHub</button>
+      </div>
+    </div>
+    <div class="project-img"></div>
+  </div>
+  <div class="other-projects">
+    <div class="project-card-small">
+      <h3>RentMentor</h3>
+      <p>Mentor discovery and booking platform for students</p>
+
+      <ul>
+        <li>Mentor profile listing UI</li>
+        <li>Session request flow</li>
+        <li>Dashboard layout</li>
+      </ul>
+
+      <div class="tech-tags">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Firebase</span>
+      </div>
+
+      <p class="role">Role: Frontend Developer</p>
+
+      <div class="pro-btn">
+        <button><i class="fa-solid fa-eye"></i>View Demo</button>
+        <button><i class="fa-brands fa-github"></i>GitHub</button>
+      </div>
+    </div>
+
+    <div class="project-card-small">
+      <h3>SkillSync</h3>
+      <p>Skill analysis and career alignment mini tool</p>
+
+      <ul>
+        <li>Skill input and analysis</li>
+        <li>Career-based recommendations</li>
+        <li>Skill gap identification</li>
+      </ul>
+
+      <div class="tech-tags">
+        <span>React.js</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Node.js</span>
+        <span>Firebase</span>
+      </div>
+
+      <p class="role">Role: Full-Stack Developer</p>
+
+      <div class="pro-btn">
+        <button><i class="fa-solid fa-eye"></i>View Demo</button>
+        <button><i class="fa-brands fa-github"></i>GitHub</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="education" id="Education">
+  <h2>Education & <span>Certifications</span></h2>
+  <p class="subtitle">My academic background and learning journey</p>
+
+  <div class="timeline">
+
+    <div class="timeline-item left">
+      <div class="content">
+        <span class="year">2023 – 2027</span>
+        <h3>Bachelor of Science in Computer Science</h3>
+        <h4>Marri Laxman Reddy Institute of Technology</h4>
+        <p>
+          Focused on Software Engineering, Data Structures, and Web Technologies with hands-on project experience.
+        </p>
+      </div>
+    </div>
+
+    <div class="timeline-item right">
+      <div class="content">
+        <span class="year">2025</span>
+        <h3>Full Stack Web Development – Learning Program</h3>
+        <h4>Coursera</h4>
+        <p>
+          Studied full-stack web development concepts and practiced building real-world applications.
+        </p>
+      </div>
+    </div>
+
+    <div class="timeline-item left">
+      <div class="content">
+        <span class="year">2025</span>
+        <h3>GDGC Study Jam – Activity-Based Learning Program</h3>
+        <h4>Google Developer Groups Campus (GDGC)</h4>
+        <p>
+          Arcade-based activities and cloud-focused learning program.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact">
+  <div class="touch">
+  <h2>Get In <span>Touch</span></h2>
+  <p>I'm currently available for full-time opportunities</p>
+  <p>Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+  <div class="touch-box">
+    <div class="box-mini">
+      <i class="fa-solid fa-envelope"></i>
+      <h3>Email</h3>
+      <p>thanabuddiswagath@gmail.com</p>
+      <button>Send Message</button>
+    </div>
+    <div class="box-mini">
+      <i class="fa-brands fa-linkedin"></i>
+      <h3>LinkedIn</h3>
+      <p>linkedin.com/in/swagath-yadav</p>
+      <button id="linkedin-connect">Connect</button>
+    </div>
+    <div class="box-mini">
+      <i class="fa-solid fa-location-dot"></i>
+      <h3>Location</h3>
+      <p>Hyderabad, India</p>
+      <span>Open to Remote</span>
+    </div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <h3>Swagath</h3>
+  <p>Frontend Developer</p>
+  <i class="fab fa-github" id="github"></i>
+  <i class="fab fa-linkedin" id="linkedin"></i>
+  <p>© 2025 Swagath. All rights reserved.</p>
+</footer>
+<script src="script.js"></script>
+</body>
 </html>
