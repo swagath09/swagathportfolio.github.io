@@ -201,6 +201,22 @@ nav {
     color: white;
 }
 
+@media (max-width: 768px) {
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .hero-buttons button {
+    width: 100%;
+    margin-right: 0;
+    
+  }
+}
+
 .hero-icons i{
   margin-top:20px;
   margin-right:20px;
@@ -212,6 +228,20 @@ nav {
 .hero-icons i:hover{
   color:#0077b6;
   transform:scale(1.2);
+}
+
+@media (max-width: 768px) {
+
+  .hero-icons {
+    display: flex;
+    justify-content: center;   /* centers horizontally */
+    align-items: center;
+    gap: 20px;                 /* space between icons */
+  }
+
+  .hero-icons i {
+    margin-right: 0;           /* remove desktop spacing */
+  }
 }
 
 .hero-img{
@@ -229,6 +259,17 @@ nav {
   border-radius:50%;
   background:rgba(23,97,195,0.15);
   z-index:-1;
+}
+
+@media (max-width: 768px) {
+
+  .hero-img {
+    width: 220px;          /* resize for mobile */
+    height: 220px;
+
+    margin: 25px auto 0;   /* centers horizontally + space above */
+  }
+
 }
 
 section{
@@ -377,6 +418,15 @@ section{
 @media (max-width: 900px) {
   .other-projects {
     grid-template-columns: 1fr;
+  }
+  .pro-btn {
+    flex-direction: column;   /* stack buttons vertically */
+    align-items: center;      /* center them */
+  }
+
+  .pro-btn button {
+    width: 100%;              /* optional full width */
+    max-width: 220px;         /* keeps it clean */
   }
 }
 
