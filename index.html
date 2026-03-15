@@ -3,321 +3,403 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Swagath | Portfolio</title>
+  <meta name="description" content="Swagath - Full Stack Developer Portfolio specializing in React, Node.js, and modern web applications.">
+  <title>Swagath | Full Stack Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="portfolio.css">
+  <link rel="stylesheet" href='portfolio.css'>
 </head>
 
 <body>
 
-<nav>
-  <div class="nav-container">
-    <h2 class="logo">Portfolio</h2>
-
+  <nav>
+    <h2 class="logo">Portfolio<span class="gradient-text">.</span></h2>
     <div class="menu-toggle" id="menu-toggle">
       <i class="fa-solid fa-bars"></i>
     </div>
-
     <div class="nav-links" id="nav-links">
       <a href="#">Home</a>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#Education">Education</a>
-      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn btn-primary" style="padding: 8px 20px; color: white;">Contact</a>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<section class="hero">
-  <div class="hero-container">
-    <div class="hero-text">
-      <h1>Hi, I'm</h1>
-      <h1 class="name">Swagath</h1>
-      <h3 class="hero-roles">
-        <span id="role-text"></span>
-      </h3>
-
-      <p>Computer Science graduate aspiring to become a Full-Stack Developer.
-Skilled in building responsive web applications using frontend and backend technologies.
-Passionate about developing real-world solutions with clean design and efficient logic.</p>
-      <div class="hero-buttons">
-        <button onclick="window.open('https://github.com/swagath09')" class="primary-btn">View Projects</button>
-        <button class="secondary-btn">Hire Me</button>
+  <section class="hero">
+    <div class="container hero-container">
+      <div class="hero-text reveal">
+        <h1>Hi, I'm <br><span class="gradient-text">Swagath</span></h1>
+        <h3><span id="role-text"></span></h3>
+        <p>Computer Science graduate passionate about building scalable full-stack applications. I transform ideas into real-world solutions with clean design and efficient logic.</p>
+        <div class="hero-buttons">
+          <button onclick="document.getElementById('projects').scrollIntoView()" class="btn btn-primary">View Projects</button>
+          <button onclick="document.getElementById('contact').scrollIntoView()" class="btn btn-secondary">Hire Me</button>
+        </div>
+        <div class="hero-icons">
+          <a href="https://github.com/swagath09" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/swagath-yadav" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
       </div>
-      <div class="hero-icons">
-        <i class="fab fa-github" id="github" title="GitHub"></i>
-        <i class="fab fa-linkedin" id="linkedin" title="LinkedIn"></i>
-        <i class="fab fa-instagram" id="instagram" title="Instagram"></i>
-      </div>
+      <div class="hero-visual reveal">
 
-    </div>
-    <div class="hero-img"></div>
-  </div>
-</section>
-
-<section id="about">
-  <h2 class="section-title">About Me</h2>
-  <div class="about-container">
-    <p>
-    I am a Computer Science student with a strong interest in web development and a clear goal of becoming a Full-Stack Developer.
-  </p>
-  <p>
-    I enjoy building end-to-end web applications by working on both frontend interfaces and backend logic, focusing on clean UI, functionality, and real-world problem solving.
-  </p>
-  <p>
-    I have built practical projects such as <strong>SafeRide</strong>, <strong>BioTrack</strong>, and <strong>CareerLens AI</strong>, gaining hands-on experience with full-stack development, databases, and AI-powered features.
-  </p>
-  </div>
-</section>
-
-<section id="skills">
-  <h2 class="section-title">Technical Stack</h2>
-  <p class="line">Technologies and tools I use to build full-stack web applications</p>
-  <div class="skills-grid">
-    <div class="skill-card">
-      <i class="fa-solid fa-code"></i>
-      <h3>Frontend</h3>
-      <p class="skill-main">HTML, CSS, JavaScript</p>
-      <p>Building responsive and interactive user interfaces</p>
-    </div>
-
-    <div class="skill-card">
-      <i class="fa-solid fa-server"></i>
-      <h3>Backend</h3>
-      <p class="skill-main">Node.js, Express</p>
-      <p>Server-side logic and RESTful API development</p>
-    </div>
-
-    <div class="skill-card">
-      <i class="fa-solid fa-database"></i>
-      <h3>Database</h3>
-      <p class="skill-main">Firebase, MongoDB (Basics)</p>
-      <p>Authentication, real-time data, and basic CRUD operations</p>
-    </div>
-
-    <div class="skill-card">
-      <i class="fa-solid fa-screwdriver-wrench"></i>
-      <h3>Tools</h3>
-      <p class="skill-main">Git, GitHub, Postman</p>
-      <p>Version control, collaboration, and API testing</p>
-    </div>
-
-    <div class="skill-card">
-      <i class="fa-solid fa-laptop-code"></i>
-      <h3>Programming</h3>
-      <p class="skill-main">Java, Problem Solving</p>
-      <p>Core programming concepts and logical problem solving</p>
-    </div>
-
-    <div class="skill-card">
-      <i class="fa-solid fa-layer-group"></i>
-      <h3>Frameworks</h3>
-      <p class="skill-main">React.js, Tailwind CSS</p>
-      <p>Component-based UI and modern styling</p>
-    </div>
-
-    <div class="skill-card">
-      <i class="fa-solid fa-shield-halved"></i>
-      <h3>Authentication</h3>
-      <p class="skill-main">Firebase Authentication</p>
-      <p>Secure login, signup, and user access control</p>
-    </div>
-
-    <div class="skill-card">
-      <i class="fa-solid fa-plug"></i>
-      <h3>APIs</h3>
-      <p class="skill-main">REST APIs</p>
-      <p>API integration, request handling, and data exchange</p>
-    </div>
-
-  </div>
-</section>
-
-<section id="projects">
-  <h2 class="section-title">Projects</h2>
-  <div class="project-card">
-    <div class="project-info">
-      <h1>SafeRide</h1>
-      <p>Women-focused ride safety platform with real-time tracking & SOS.</p>
-      <p><strong>Role: Full-Stack Developer</strong></p>
-      <ul>
-        <li>Real-time GPS tracking</li>
-        <li>Emergency SOS feature</li>
-        <li>Firebase Authentication</li>
-        <li>Secure booking system</li>
-      </ul>
-      <p>Designed to improve safety and trust for women commuters in real-world scenarios.</p>
-      <div class="tech-tags">
-        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Firebase</span><span>Node.js</span>
-      </div>
-      <div class="pro-btn">
-        <button onclick="window.open('https://swagath09.github.io/SafeRide/', '_blank')">
-          <i class="fa-solid fa-eye"></i> View Demo
-        </button>
-
-        <button onclick="window.open('https://github.com/swagath09/SafeRide', '_blank')">
-          <i class="fa-brands fa-github"></i> GitHub
-        </button>
+        <div class="avatar-placeholder">
+            <i class="fa-solid fa-code"></i>
+        </div>
       </div>
     </div>
-    <div class="project-img"></div>
-  </div>
-  <div class="other-projects">
-    <div class="project-card-small">
-      <h3>BioTrack</h3>
-      <p>Health & nutrition tracking web application</p>
-      <p>BioTrack is a full-stack health-focused web application designed to help users
-explore nutrition data, monitor dietary information, and visualize basic
-health-related insights through an interactive dashboard.</p>
+  </section>
 
-      <ul>
-        <li>Nutrition information interface</li>
-        <li>Dashboard & analytics display</li>
-        <li>Health data visualization</li>
-      </ul>
+  <section id="about" class="section-padding">
+    <div class="container">
+      <div class="about">
+        <div class="left-text">
+          <h2>About Me</h2>
 
-      <div class="tech-tags">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>SQL</span>
-        <span>Python</span>
-        <span>Firebase</span>
-      </div>
+          <p>
+            I am a Computer Science student with a strong interest in web
+            development and a clear goal of becoming a Full-Stack Developer.
+          </p><br>
 
-      <p class="role">Role: Full-Stack Developer</p>
+          <p>
+            I enjoy building end-to-end web applications by working on both
+            frontend interfaces and backend logic, focusing on clean UI,
+            functionality, and real-world problem solving.
+          </p><br>
 
-      <div class="pro-btn">
-        <button onclick="window.open('https://biotrack-1.onrender.com/', '_blank')">
-          <i class="fa-solid fa-eye"></i> View Demo
-        </button>
+          <p>
+            I have built practical projects such as SafeRide, BioTrack, and
+            CareerLens ATS Resume Analyzer, gaining hands-on experience with
+            full-stack development, databases, and modern web technologies.
+          </p>
 
-        <button onclick="window.open('https://github.com/swagath09/BioTrack', '_blank')">
-          <i class="fa-brands fa-github"></i> GitHub
-        </button>
-      </div>
-    </div>
+          <div class="about-stats">
 
-    <div class="project-card-small">
-      <h3>CareerLens AI</h3>
-      <p>AI-powered resume analysis platform that evaluates resume quality,
-        identifies skill gaps, and provides ATS-style insights.</p>
+            <div class="stats">
+              <h2>3+</h2>
+              <p>Major Projects</p>
+            </div>
 
-      <ul>
-        <li>Resume upload & analysis </li>
-        <li>Career-based recommendations</li>
-        <li>ATS-style evaluation logic</li>
-        <li>Interactive dashboard</li>
-      </ul>
+            <div class="stats">
+              <h2>2027</h2>
+              <p>Graduating</p>
+            </div>
+          </div>
+        </div>
 
-      <div class="tech-tags">
-        <span>React.js</span>
-        <span>CSS</span>
-        <span>Vite</span>
-        <span>JavaScript</span>
-        <span>Node.js</span>
-        <span>Express.js</span>
-        <span>Firebase</span>
-        <span>REST API</span>
-        <span>Render</span>
-        <span>Multer</span>
-        <span>PDF Parsing</span>
-      </div>
+        <div class="right-code">
+          <div class="code-box">
+            <div class="dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
 
-      <p class="role">Role: Full-Stack Developer</p>
+  <pre><code>
+  const developer = {
+    name: "Swagath",
+    role: "Full-Stack Developer",
+    stack: ["React", "Node.js", "Express", "MongoDB", "Firebase"],
+    tools: ["Git", "GitHub"],
+    projects: ["CareerLens", "SafeRide", "BioTrack"],
+    passion: "Building real-world web applications",
+    hire: () => "Open to Internship Opportunities"
+  };
+  </code></pre>
 
-      <div class="pro-btn">
-        <button onclick="window.open('https://careerlens-app.netlify.app/', '_blank')">
-          <i class="fa-solid fa-eye"></i> View Demo
-        </button>
-
-        <button onclick="window.open('https://github.com/swagath09/CareerLens', '_blank')">
-          <i class="fa-brands fa-github"></i> GitHub
-        </button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="education" id="Education">
-  <h2>Education & <span>Certifications</span></h2>
-  <p class="subtitle">My academic background and learning journey</p>
+  <section id="skills" class="section-padding" style="background-color: white;">
+    <div class="container">
+      <h2 class="section-title reveal">Technical Stack</h2>
+      <p class="section-subtitle reveal">Technologies and tools I use to build full-stack web applications</p>
+      
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <i class="fa-solid fa-code"></i>
+          <h3>Frontend</h3>
+          <span class="skill-main">HTML, CSS, JavaScript</span>
+          <p>React.js, Tailwind CSS</p>
+        </div>
 
-  <div class="timeline">
+        <div class="skill-card reveal">
+          <i class="fa-solid fa-server"></i>
+          <h3>Backend</h3>
+          <span class="skill-main">Node.js, Express</span>
+          <p>Server-side logic & REST APIs</p>
+        </div>
 
-    <div class="timeline-item left">
-      <div class="content">
-        <span class="year">2023 – 2027</span>
-        <h3>Bachelor of Science in Computer Science</h3>
-        <h4>Marri Laxman Reddy Institute of Technology</h4>
-        <p>
-          Focused on Software Engineering, Data Structures, and Web Technologies with hands-on project experience.
-        </p>
+        <div class="skill-card reveal">
+          <i class="fa-solid fa-database"></i>
+          <h3>Database</h3>
+          <span class="skill-main">Firebase, MongoDB</span>
+          <p>Real-time data & CRUD ops</p>
+        </div>
+
+        <div class="skill-card reveal">
+          <i class="fa-solid fa-screwdriver-wrench"></i>
+          <h3>Tools</h3>
+          <span class="skill-main">Git, GitHub, Postman</span>
+          <p>Version control & API testing</p>
+        </div>
+
+        <div class="skill-card reveal">
+          <i class="fa-brands fa-java"></i>
+          <h3>Programming</h3>
+          <span class="skill-main">Java, Core Logic</span>
+          <p>OOPs and problem solving</p>
+        </div>
+        
+        <div class="skill-card reveal">
+          <i class="fa-solid fa-shield-halved"></i>
+          <h3>Auth & Security</h3>
+          <span class="skill-main">Firebase Auth</span>
+          <p>Secure user access control</p>
+        </div>
+
+        <div class="skill-card reveal">
+          <i class="fa-solid fa-cloud"></i>
+          <h3>Deployment</h3>
+          <span class="skill-main">Netlify, Render</span>
+          <p>Hosting and deploying full-stack applications</p>
+        </div>
+
+        <div class="skill-card reveal">
+          <i class="fa-solid fa-plug"></i>
+          <h3>API Integration</h3>
+          <span class="skill-main">REST APIs, JSON</span>
+          <p>Connecting frontend with backend services</p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="timeline-item right">
-      <div class="content">
-        <span class="year">2025</span>
-        <h3>Full Stack Web Development – Learning Program</h3>
-        <h4>Coursera</h4>
-        <p>
-          Studied full-stack web development concepts and practiced building real-world applications.
-        </p>
+  <section id="projects" class="section-padding">
+    <div class="container">
+      <h2 class="section-title reveal">Featured Projects</h2>
+      <p class="section-subtitle reveal">
+        A selection of applications I've built to solve real-world problems
+      </p>
+
+      <div class="project-card featured reveal">
+        <div class="project-img">
+          <img src="CareerLens-img.png" alt="CareerLens ATS Resume Analyzer">
+        </div>
+
+        <div class="project-info">
+          <h3>CareerLens – ATS Resume Analyzer</h3>
+          <p>Full-Stack Developer</p>
+
+          <p>
+            AI-powered resume analysis platform that evaluates resume quality,
+            detects skill gaps, and provides ATS-style insights to help job
+            seekers improve their resumes.
+          </p>
+
+          <ul>
+            <li>Resume upload and PDF parsing</li>
+            <li>ATS score and skill gap detection</li>
+            <li>Career recommendations based on resume data</li>
+            <li>Full-stack application with deployed backend API</li>
+          </ul>
+
+          <div class="tech-tags">
+            <span>React.js</span>
+            <span>Node.js</span>
+            <span>Express.js</span>
+            <span>MongoDB</span>
+            <span>Firebase Auth</span>
+            <span>PDF Parser</span>
+            <span>Multer</span>
+            <span>REST API</span>
+            <span>Netlify</span>
+            <span>Render</span>
+          </div>
+
+          <div class="pro-btn">
+            <button onclick="window.open('https://careerlens-app.netlify.app/', '_blank')" class="btn-view">
+              <i class="fa-solid fa-eye"></i> View Demo
+            </button>
+
+            <button onclick="window.open('https://github.com/swagath09/CareerLens', '_blank')" class="btn-code">
+              <i class="fa-brands fa-github"></i> GitHub
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card-small reveal">
+          <h3>SafeRide</h3>
+
+          <p>
+            Women-focused ride safety platform designed to improve commuter
+            safety through real-time location tracking and emergency SOS alerts.
+          </p>
+
+          <ul style="margin-bottom:15px; font-size:0.9rem; color:#64748b; padding-left:15px;">
+            <li>Real-time GPS tracking</li>
+            <li>Emergency SOS alert system</li>
+            <li>Secure Firebase authentication</li>
+            <li>Ride booking interface</li>
+          </ul>
+
+          <div class="tech-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Firebase</span>
+            <span>Node.js</span>
+            <span>Express.js</span>
+          </div>
+
+          <p class="role">Role: Full-Stack Developer</p>
+
+          <div class="pro-btn">
+            <button onclick="window.open('https://swagath09.github.io/SafeRide/', '_blank')" class="btn-view">
+              <i class="fa-solid fa-eye"></i> Demo
+            </button>
+
+            <button onclick="window.open('https://github.com/swagath09/SafeRide', '_blank')" class="btn-code">
+              <i class="fa-brands fa-github"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="project-card-small reveal">
+          <h3>BioTrack</h3>
+
+          <p>
+            Health and nutrition tracking web application that allows users to
+            explore dietary information and visualize health analytics through
+            an interactive dashboard.
+          </p>
+
+          <ul style="margin-bottom:15px; font-size:0.9rem; color:#64748b; padding-left:15px;">
+            <li>Nutrition data interface</li>
+            <li>Health analytics dashboard</li>
+            <li>Data visualization charts</li>
+          </ul>
+
+          <div class="tech-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Python</span>
+            <span>SQL</span>
+            <span>Firebase</span>
+            <span>Render</span>
+          </div>
+
+          <p class="role">Role: Full-Stack Developer</p>
+
+          <div class="pro-btn">
+            <button onclick="window.open('https://biotrack-1.onrender.com/', '_blank')" class="btn-view">
+              <i class="fa-solid fa-eye"></i> Demo
+            </button>
+
+            <button onclick="window.open('https://github.com/swagath09/BioTrack', '_blank')" class="btn-code">
+              <i class="fa-brands fa-github"></i>
+            </button>
+          </div>
+        </div>
+
       </div>
     </div>
+  </section>
 
-    <div class="timeline-item left">
-      <div class="content">
-        <span class="year">2025</span>
-        <h3>GDGC Study Jam – Activity-Based Learning Program</h3>
-        <h4>Google Developer Groups Campus (GDGC)</h4>
-        <p>
-          Arcade-based activities and cloud-focused learning program.
-        </p>
+  <section class="education section-padding" id="Education" style="background-color: white;">
+    <div class="container">
+      <h2 class="section-title reveal">Education & <span class="gradient-text">Certifications</span></h2>
+      <p class="section-subtitle reveal">My academic background and continuous learning journey</p>
+
+      <div class="timeline">
+        <div class="timeline-item left reveal">
+          <div class="content">
+            <span class="year">2023 – 2027</span>
+            <h3>B.Sc in Computer Science</h3>
+            <h4>Marri Laxman Reddy Institute of Technology</h4>
+            <p>Focused on Software Engineering, Data Structures, and Web Technologies with hands-on project experience.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item right reveal">
+          <div class="content">
+            <span class="year">2025</span>
+            <h3>Full Stack Web Development</h3>
+            <h4>Coursera</h4>
+            <p>Studied full-stack web development concepts and practiced building real-world applications.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item left reveal">
+          <div class="content">
+            <span class="year">2025</span>
+            <h3>GDGC Study Jam</h3>
+            <h4>Google Developer Groups Campus</h4>
+            <p>Arcade-based activities and cloud-focused learning program.</p>
+          </div>
+        </div>
       </div>
     </div>
+  </section>
 
-  </div>
-</section>
+  <section id="contact" class="section-padding">
+    <div class="container">
+      <div class="contact-section reveal">
+        <h2>Get In <span class="gradient-text">Touch</span></h2>
+        <p style="margin-top: 10px; color: var(--text-muted);">I'm currently available for full-time opportunities</p>
+        <p style="color: var(--text-muted);">Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+        
+        <div class="opportunities">
+          <i class="fa-solid fa-wifi"></i>
+          <p>Open to Remote Opportunities</p>
+        </div>
 
-<section id="contact">
-  <div class="touch">
-  <h2>Get In <span>Touch</span></h2>
-  <p>I'm currently available for full-time opportunities</p>
-  <p>Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
-  <div class="touch-box">
-    <div class="box-mini">
-      <i class="fa-solid fa-envelope"></i>
-      <h3>Email</h3>
-      <p>thanabuddiswagath@gmail.com</p>
-      <button>Send Message</button>
+        <div class="touch-box">
+          <div class="box-mini">
+            <i class="fa-solid fa-envelope"></i>
+            <h3>Email</h3>
+            <p>swagathyadav09@gmail.com</p>
+            <button onclick="window.location.href='mailto:thanabuddiswagath@gmail.com'">Send Message</button>
+          </div>
+          <div class="box-mini">
+            <i class="fa-brands fa-linkedin"></i>
+            <h3>LinkedIn</h3>
+            <p>linkedin.com/in/swagath-yadav</p>
+            <button onclick="window.open('https://linkedin.com/in/swagath-yadav', '_blank')">Connect</button>
+          </div>
+          <div class="box-mini">
+            <i class="fa-solid fa-location-dot"></i>
+            <h3>Location</h3>
+            <p>Hyderabad, India</p>
+            <span style="color: var(--primary); font-weight: 500; font-size: 0.9rem;">Open to Remote</span>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="box-mini">
-      <i class="fa-brands fa-linkedin"></i>
-      <h3>LinkedIn</h3>
-      <p>linkedin.com/in/swagath-yadav</p>
-      <button id="linkedin-connect">Connect</button>
-    </div>
-    <div class="box-mini">
-      <i class="fa-solid fa-location-dot"></i>
-      <h3>Location</h3>
-      <p>Hyderabad, India</p>
-      <span>Open to Remote</span>
-    </div>
-  </div>
-</div>
-</section>
+  </section>
 
-<footer>
-  <h3>Swagath</h3>
-  <p>Frontend Developer</p>
-  <i class="fab fa-github" id="github"></i>
-  <i class="fab fa-linkedin" id="linkedin"></i>
-  <p>© 2025 Swagath. All rights reserved.</p>
-</footer>
-<script src="script.js"></script>
+  <footer>
+    <h3>Swagath</h3>
+    <p>Full-Stack Developer</p>
+    <div>
+        <a href="https://github.com/swagath09" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/swagath-yadav" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p style="margin-top: 20px;">© 2025 Swagath. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
